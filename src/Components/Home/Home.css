@@ -1,0 +1,137 @@
+.home-container {
+  background-image: url('../../Assets/girls.jpg'); /* Putanja do slike */
+  height: 100vh; /* Visina ekrana */
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column; /* Omogućava vertikalno raspoređivanje */
+  align-items: flex-start; /* Tekst ostaje levo */
+  justify-content: flex-start; /* Počinje od vrha */
+  padding: 4rem 2rem; /* Veći razmak od vrha i sa strane */
+  color: white; /* Boja teksta */
+  font-family: Arial, sans-serif;
+}
+
+.home-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.intro-text {
+  margin-top:4rem;
+  margin-left:3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Razmak između redova */
+}
+
+.line {
+  position: relative;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  overflow: hidden;
+  height: 3.5rem; /* Visina reda */
+
+}
+
+.line .block {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: crimson;
+  animation: slideBlock 2s ease-in-out forwards; /* Smanjeno sa 3s na 2s */
+}
+
+.line span {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInText 0.3s ease-in forwards; /* Smanjeno sa 0.5s na 0.3s */
+  animation-delay: 1.5s; /* Smanjeno da prati ubrzanje bloka */
+}
+
+/* Stilovi za poslednji red */
+.line:last-child .block {
+  display: none; /* Uklanja crveni blok */
+}
+
+.line:last-child span {
+  color: black; /* Crna boja teksta */
+  animation-delay: 6s; /* Kašnjenje da se pojavi posle ostalih redova */
+}
+
+/* Animacija crvenog bloka */
+@keyframes slideBlock {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Animacija pojavljivanja teksta */
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+.hellou {
+  position: relative;
+  font-size: 4vw;
+  color: transparent;
+  text-transform: uppercase;
+}
+
+.hellou::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: black;
+  -webkit-text-stroke: 0vw #46b6b8;
+  border-right: 4px solid #d83de6;
+  overflow: hidden;
+  animation: text-ani 1.2s linear forwards;
+}
+
+@keyframes text-ani {
+  0% {
+    width: 0;
+    border-right: 4px solid #d83de6;
+  }
+  95% {
+    width: 100%;
+    border-right: 4px solid #d83de6; /* Linija još uvek vidljiva */
+  }
+  100% {
+    width: 100%;
+    border-right: 0px solid transparent; /* Linija nestaje */
+  }
+}

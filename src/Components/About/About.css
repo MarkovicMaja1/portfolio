@@ -1,0 +1,76 @@
+.all-projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Razmak između projekata */
+  width: calc(100% - 40px);
+  margin: 4rem auto;
+  padding: 4rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.project {
+  display: flex;
+  width: 100%;
+  height: 250px; /* Visina svakog projekta */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.project-left-first {
+  flex: 1;
+  position: relative; /* Potrebno za ::after */
+  background-image: url('../../Assets/socialmedia.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.project-left-first::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Blago zatamnjenje */
+  z-index: 1; /* Osigurava da sloj bude iznad slike */
+}
+
+
+
+.project-left {
+  flex: 1; /* Leva strana zauzima 50% */
+  background-image: url('../../Assets/wb.jpg'); /* Putanja do slike */
+  background-size: cover;
+  background-position: center;
+}
+
+
+.project-right {
+  flex: 1; /* Desna strana zauzima 50% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  gap: 0.5rem;
+}
+
+
+.project-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff9f9;
+  text-align: center;
+}
+
+.project-code {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff5f5;
+  text-align: center;
+}
+
+

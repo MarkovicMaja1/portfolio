@@ -1,0 +1,33 @@
+.footer-container {
+    height: 18vh; /* Visina ekrana */
+  
+    background-color: rgb(35, 45, 55)
+  }
+  
+
+  .nav-footer-container{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .nav-footer-container .highlight {
+    color: crimson /* Crvena boja za oba M */
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+    color: #6c757d;
+    text-align: center;
+    margin-top: auto; /* Pushes the copyright to the bottom */
+  }
+  
+  .footer-line {
+    width: 80%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+  }

@@ -1,0 +1,96 @@
+.technologies-title {
+    margin-top: 3rem;
+    font-size: 4rem;
+    font-weight: 400; /* Najtanji stil */
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.technologies-body {
+    display: flex;
+    flex-wrap: wrap; /* Dozvoljava prelazak u sledeći red */
+    gap: 15px; /* Manji razmak između kockica */
+    justify-content: center; /* Centriranje sadržaja */
+    margin: 50px 5%; /* Margine */
+}
+
+.services-item {
+    flex: 1 1 calc(18% - 30px); /* Smanjen udeo prostora za svaku kocku */
+    max-width: calc(18% - 30px); /* Maksimalna širina kocke */
+    aspect-ratio: 1; /* Kockasti oblik */
+    border-radius: 10px;
+    background-image: url(../../Assets/learn1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.services-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:  rgb(35, 45, 55) ;
+    opacity: .7;
+    z-index: -1;
+}
+
+.services-icon {
+    position: absolute;
+    width: 50px; /* Širina logotipa */
+    height: 50px; /* Visina logotipa */
+    top: 30%; /* Malo gore */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Iznad pozadinske slike */
+}
+.services-icon-node {
+    position: absolute;
+    width: 45px; /* Širina logotipa */
+    height: 50px; /* Visina logotipa */
+    top: 30%; /* Malo gore */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Iznad pozadinske slike */
+}
+.services-icon-react {
+    position: absolute;
+    width:55px; /* Širina logotipa */
+    height: 50px; /* Visina logotipa */
+    top: 30%; /* Malo gore */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Iznad pozadinske slike */
+}
+
+.services-name {
+    position: absolute;
+    top: 50%; /* Pozicionira tekst u sredinu */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centriranje */
+    font-size: 1rem; /* Veličina fonta */
+    color:white;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2; /* Iznad pozadinske slike */}
+
+
+/* Opcionalno: Responsive stil za manje ekrane */
+@media (max-width: 768px) {
+    .services-item {
+        flex: 1 1 calc(30% - 20px); /* Šire kocke na manjim ekranima */
+        max-width: calc(30% - 20px);
+    }
+    .technologies-body {
+        gap: 10px; /* Manji razmak između kockica na manjim ekranima */
+    }
+}

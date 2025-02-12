@@ -1,0 +1,81 @@
+.contact-title {
+  font-size: 4rem;
+  font-weight: 100;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.contact-body {
+  display: flex;
+  justify-content: center; /* Centriramo sve unutar body-a */
+  align-items: center; /* Vertikalno centriranje */
+  gap: 30px; /* Razmak između bokseva */
+  flex-wrap: wrap; /* Omogućava prelamanje sadržaja na manjim ekranima */
+  padding: 2rem; /* Padding oko sadržaja */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Razmak između slike i teksta */
+  width: 450px;
+  height: 150px;
+  text-align: center;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 30px;
+  box-shadow: 0px 0px 18px 0 #0000002c;
+  transition: .3s ease box-shadow;
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.contact-name {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #333;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/* Media Query za mobilne uređaje */
+@media (max-width: 768px) {
+  .contact-body {
+    flex-direction: column; /* Stavimo stavke u kolonu na manjim ekranima */
+    gap: 1.5rem;
+  }
+
+  .contact-item {
+    width: 90%; /* Širina kutije je veća na manjim ekranima */
+    height: auto; /* Automatska visina */
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .contact-icon {
+    width: 50px; /* Smanjujemo ikone za mobilne uređaje */
+    height: 50px;
+  }
+
+  .contact-name {
+    font-size: 1rem; /* Smanjujemo font za mobilne uređaje */
+  }
+
+  .contact-title {
+    font-size: 1.5rem; /* Manji naslov na mobilnim uređajima */
+  }
+}
