@@ -15,12 +15,16 @@
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
-    "react-scroll": "^1.9.2",
+    "react-scroll": "^1.9.0",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "postinstall": "npm install --legacy-peer-deps"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
+
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -38,5 +42,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+    
   }
+  
 }
