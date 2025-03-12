@@ -27,6 +27,19 @@
   background-position: center;
 }
 
+.project-left-first {
+  flex: 1;
+  position: relative; /* Potrebno za ::after */
+  background-image: url('../../Assets/socialmedia.png');
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-in-out; /* Glatka animacija */
+}
+
+.project-left-first:hover {
+  transform: scale(1.1); /* Zumira sliku kada se pređe mišem */
+}
+
 .project-left-first::after {
   content: '';
   position: absolute;
@@ -41,11 +54,31 @@
 
 
 .project-left {
-  flex: 1; /* Leva strana zauzima 50% */
-  background-image: url('../../Assets/wb.jpg'); /* Putanja do slike */
+  flex: 1;
+  position: relative; /* Potrebno za ::after */
+  background-image: url('../../Assets/quiz.png'); /* Putanja do slike */
   background-size: cover;
   background-position: center;
+  transition: transform 0.3s ease-in-out; /* Glatka animacija */
 }
+
+.project-left:hover {
+  transform: scale(1.1); /* Zumira sliku kada se pređe mišem */
+}
+
+.project-left::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Blago zatamnjenje */
+  z-index: 1; /* Osigurava da sloj bude iznad slike */
+}
+
+
+
 
 
 .project-right {
@@ -66,7 +99,7 @@
   text-align: center;
 }
 
-.project-code {
+.project-code a{
   font-size: 18px;
   font-weight: bold;
   color: #fff5f5;
@@ -74,3 +107,33 @@
 }
 
 
+@media screen and (max-width: 768px) {
+  .nav-logo-container{
+    margin-left: 0rem !important;
+  }
+  .home-container{
+    position:center;
+  }
+  .intro-text {
+    margin-left: 4rem; /* Pomera tekst skroz levo na manjim ekranima */
+  }
+
+  .line {
+    font-size: 1.8rem; /* Manji font za mobilne ekrane */
+    height: auto;
+  }
+
+  .line:last-child span {
+    color: crimson !important; /* WEB DEVELOPER u crvenoj boji */
+  }
+
+  .technologies-title{
+    font-size: 1.8rem !important; 
+  }
+  .project-name{
+    font-size:1rem;
+  }
+  .project-code{
+    font-size:1rem;
+  }
+}

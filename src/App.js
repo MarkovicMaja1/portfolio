@@ -11,6 +11,8 @@ import About from "./Components/About/About";
 import Technologies from "./Components/Technologies/Technologies";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import Aboutme from "./Components/Aboutme/Aboutme";
+
 function App() {
   return (
     <div className="App">
@@ -26,6 +28,9 @@ function App() {
         </div>
         <div id="technologies">
           <Technologies/>
+        </div>
+        <div id="aboutme">
+          <Aboutme/>
         </div>
         <div id="contact">
           <Contact/> 

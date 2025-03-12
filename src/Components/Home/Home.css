@@ -73,6 +73,40 @@
   animation-delay: 6s; /* Kašnjenje da se pojavi posle ostalih redova */
 }
 
+.portfolio-button {
+  display: inline-block;
+  color: white;
+  background-color: transparent;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 30px;
+  padding: 12px 36px;
+  border: 2px solid crimson;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.portfolio-button:hover::before {
+  left: 0;
+  color: white !important;
+}
+
+.portfolio-button span {
+  position: relative;
+  z-index: 1;
+  color: white !important;
+}
+
+.portfolio-button:hover {
+  color: white !important;
+  transform: scale(1.05);
+}
+
+
 /* Animacija crvenog bloka */
 @keyframes slideBlock {
   0% {
@@ -133,5 +167,68 @@
   100% {
     width: 100%;
     border-right: 0px solid transparent; /* Linija nestaje */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-logo-container{
+    margin-left: 0rem !important;
+  }
+  .home-container{
+    position:center;
+  }
+  .intro-text {
+    margin-left: 4rem; /* Pomera tekst skroz levo na manjim ekranima */
+  }
+
+  .line {
+    font-size: 1.8rem; /* Manji font za mobilne ekrane */
+    height: auto;
+  }
+
+  .line:last-child span {
+    color: crimson !important; /* WEB DEVELOPER u crvenoj boji */
+  }
+  .portfolio-button{
+    font-size: 3vw;
+  }
+
+  .developer{
+    color:white !important;
+  }
+}
+
+
+.line {
+  overflow: hidden;
+}
+
+.line span {
+  display: inline-block;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideIn 1s ease-out forwards;
+}
+
+.line:nth-child(1) span {
+  animation-delay: 0.3s;
+}
+
+.line:nth-child(2) span {
+  animation-delay: 0.8s;
+}
+
+.line:nth-child(3) span {
+  animation-delay: 1.9s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }

@@ -3,6 +3,9 @@ import React, { useState,useEffect } from "react";
 //import Logo from "../Assets/Logo.svg";
 import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
+import { HiGlobeAlt } from "react-icons/hi2";
+import { GoArchive } from "react-icons/go";
+
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -53,6 +56,11 @@ const Navbar = () => {
       id: "portfolio"
     },
     {
+      text: "About",
+      icon: <InfoIcon />,
+      id: "aboutme"
+    },
+    {
       text: "Contact",
       icon: <PhoneRoundedIcon />,
       id: "contact"
@@ -75,6 +83,7 @@ const Navbar = () => {
         <ScrollLink to="home" smooth={true} duration={500}>Home</ScrollLink>
         <ScrollLink to="portfolio" smooth={true} duration={500} offset={-100}>Portfolio</ScrollLink>
         <ScrollLink to="technologies" smooth={true} duration={500} offset={-100}>Technologies</ScrollLink>
+        <ScrollLink to="aboutme" smooth={true} duration={500} offset={-100}>About</ScrollLink>
         <ScrollLink to="contact" smooth={true} duration={500}>Contact</ScrollLink>
         {/* <a href="">
           <BsCart2 className="navbar-cart-icon" />

@@ -1,28 +1,44 @@
 import React from 'react';
 import './Home.css';
+import { Link as ScrollLink } from 'react-scroll'; 
 
 const Home = () => {
-  const lines = ['HELLO', 'MY NAME IS', 'MAJA', 'WEB DEVELOPER'];
+  const lines = ['HELLO', 'MY NAME IS MAJA', 'WEB DEVELOPER'];
 
   return (
     <div className="home-container">
       <div className="intro-text">
-        {lines.map((line, index) => (
+        {/* {lines.map((line, index) => (
           <div className="line" key={index}>
-            {index !== lines.length - 1 && (
-              <div className="block" style={{ animationDelay: `${index * 2}s` }}></div>
-            )}
             <span
               style={{
-                animationDelay: `calc(${index * 2}s + ${index === lines.length - 1 ? 0.5 : 1.5}s)`,
+                animationDelay: `${0.3 + index * 1.2}s`, // HELLO: 0.3s, MY NAME IS: 0.8s, MAJA: 1.3s, WEB DEVELOPER: 1.8s
               }}
             >
               {line}
             </span>
           </div>
-        ))}
+        ))} */}
+
+
+        <div className="line"><span >HELLO</span></div>
+        <div className="line"><span >MY NAME IS MAJA</span></div>
+        <div className="line developer" style={{ color: 'black' }}><span>WEB DEVELOPER</span></div>
+
+
+
+        <div>
+          <ScrollLink 
+            to="portfolio" 
+            smooth={true} 
+            duration={500} 
+            offset={-100} 
+            className='portfolio-button'
+          >
+            Portfolio
+          </ScrollLink>
+        </div>
       </div>
-      {/* <h1 data-text="Hello" className='hellou'>Hello</h1> */}
     </div>
   );
 };
