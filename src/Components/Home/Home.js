@@ -23,7 +23,7 @@ const Home = () => {
 
         <div className="line"><span >HELLO</span></div>
         <div className="line"><span >MY NAME IS MAJA</span></div>
-        <div className="line developer" style={{ color: 'black' }}><span>FRONTEND DEVELOPER</span></div>
+        <div className="line developer" style={{ color: 'crimson' }}><span>FRONTEND DEVELOPER</span></div>
 
 
 
