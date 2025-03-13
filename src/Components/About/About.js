@@ -7,7 +7,7 @@ const About = () => {
     
     <div className="about-container">
     <div className='technologies-title'>
-   Web Applications
+   Portfolio
 </div>
       <div className="all-projects">
         <div className="project">
